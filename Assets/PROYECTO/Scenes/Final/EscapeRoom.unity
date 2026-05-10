@@ -5276,6 +5276,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 95333608647159064, guid: 4d38e24d24b59c142a3ed1d2cd2d97c3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.233
+      objectReference: {fileID: 0}
+    - target: {fileID: 95333608647159064, guid: 4d38e24d24b59c142a3ed1d2cd2d97c3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.497
+      objectReference: {fileID: 0}
+    - target: {fileID: 95333608647159064, guid: 4d38e24d24b59c142a3ed1d2cd2d97c3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.211
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768658649532769261, guid: 4d38e24d24b59c142a3ed1d2cd2d97c3,
+        type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4661775717122125273, guid: 4d38e24d24b59c142a3ed1d2cd2d97c3,
         type: 3}
       propertyPath: m_Name
@@ -5628,17 +5648,17 @@ PrefabInstance:
     - target: {fileID: 2552890292047807549, guid: b4bbe15423322ed41a7f5c18437c5a46,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.1446
+      value: 2.206
       objectReference: {fileID: 0}
     - target: {fileID: 2552890292047807549, guid: b4bbe15423322ed41a7f5c18437c5a46,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.532
+      value: 0.324
       objectReference: {fileID: 0}
     - target: {fileID: 2552890292047807549, guid: b4bbe15423322ed41a7f5c18437c5a46,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.23074
+      value: 0.808
       objectReference: {fileID: 0}
     - target: {fileID: 2552890292047807549, guid: b4bbe15423322ed41a7f5c18437c5a46,
         type: 3}
@@ -10969,7 +10989,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1164691173
 PrefabInstance:
@@ -18592,6 +18612,7 @@ GameObject:
   - component: {fileID: 1804825873}
   - component: {fileID: 1804825876}
   - component: {fileID: 1804825875}
+  - component: {fileID: 1804825877}
   m_Layer: 0
   m_Name: PuzzleManager
   m_TagString: Untagged
@@ -18624,6 +18645,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1804825875}
         m_TargetAssemblyTypeName: ProgressLanternController, Assembly-CSharp
         m_MethodName: LightNextLantern
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1804825877}
+        m_TargetAssemblyTypeName: EscapeRoomManager, Assembly-CSharp
+        m_MethodName: AddSolvedPuzzle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18689,6 +18722,46 @@ MonoBehaviour:
       - m_Target: {fileID: 1804825875}
         m_TargetAssemblyTypeName: ProgressLanternController, Assembly-CSharp
         m_MethodName: LightNextLantern
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1804825877}
+        m_TargetAssemblyTypeName: EscapeRoomManager, Assembly-CSharp
+        m_MethodName: AddSolvedPuzzle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1804825877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804825872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d445fcaf14a84440a11b03285e14ccb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalPuzzles: 1
+  onEscapeRoomCompleted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1428035796}
+        m_TargetAssemblyTypeName: UnityEngine.Playables.PlayableDirector, UnityEngine
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -22192,7 +22265,7 @@ PrefabInstance:
     - target: {fileID: 9190665908157099497, guid: ea01289ad12c363458e3a12b1e6afdf2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 9190665908157099497, guid: ea01289ad12c363458e3a12b1e6afdf2,
         type: 3}
@@ -23451,17 +23524,17 @@ PrefabInstance:
     - target: {fileID: 6717221304049181660, guid: 837ee73cd60b7964cbaa4cad186161d9,
         type: 3}
       propertyPath: OnPotionPoured.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6717221304049181660, guid: 837ee73cd60b7964cbaa4cad186161d9,
         type: 3}
       propertyPath: OnPotionPoured.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6717221304049181660, guid: 837ee73cd60b7964cbaa4cad186161d9,
         type: 3}
       propertyPath: OnPotionPoured.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6717221304049181660, guid: 837ee73cd60b7964cbaa4cad186161d9,
         type: 3}
@@ -23477,12 +23550,12 @@ PrefabInstance:
         type: 3}
       propertyPath: OnPotionPoured.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1428035796}
+      objectReference: {fileID: 1804825877}
     - target: {fileID: 6717221304049181660, guid: 837ee73cd60b7964cbaa4cad186161d9,
         type: 3}
       propertyPath: OnPotionPoured.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1428035796}
+      objectReference: {fileID: 1804825875}
     - target: {fileID: 6717221304049181660, guid: 837ee73cd60b7964cbaa4cad186161d9,
         type: 3}
       propertyPath: OnPotionPoured.m_PersistentCalls.m_Calls.Array.data[2].m_Target
@@ -23495,18 +23568,23 @@ PrefabInstance:
       objectReference: {fileID: 1428035796}
     - target: {fileID: 6717221304049181660, guid: 837ee73cd60b7964cbaa4cad186161d9,
         type: 3}
+      propertyPath: OnPotionPoured.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6717221304049181660, guid: 837ee73cd60b7964cbaa4cad186161d9,
+        type: 3}
       propertyPath: OnPotionPoured.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6717221304049181660, guid: 837ee73cd60b7964cbaa4cad186161d9,
         type: 3}
       propertyPath: OnPotionPoured.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Play
+      value: AddSolvedPuzzle
       objectReference: {fileID: 0}
     - target: {fileID: 6717221304049181660, guid: 837ee73cd60b7964cbaa4cad186161d9,
         type: 3}
       propertyPath: OnPotionPoured.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Play
+      value: LightNextLantern
       objectReference: {fileID: 0}
     - target: {fileID: 6717221304049181660, guid: 837ee73cd60b7964cbaa4cad186161d9,
         type: 3}
@@ -23520,6 +23598,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6717221304049181660, guid: 837ee73cd60b7964cbaa4cad186161d9,
         type: 3}
+      propertyPath: OnPotionPoured.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: EscapeRoomManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6717221304049181660, guid: 837ee73cd60b7964cbaa4cad186161d9,
+        type: 3}
+      propertyPath: OnPotionPoured.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: ProgressLanternController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6717221304049181660, guid: 837ee73cd60b7964cbaa4cad186161d9,
+        type: 3}
       propertyPath: OnPotionPoured.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 0
       objectReference: {fileID: 0}
@@ -23527,17 +23615,16 @@ PrefabInstance:
         type: 3}
       propertyPath: OnPotionPoured.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 11400000, guid: 67a08861189b7874fac8b9dadcbeb9a7,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 6717221304049181660, guid: 837ee73cd60b7964cbaa4cad186161d9,
         type: 3}
       propertyPath: OnPotionPoured.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Playables.PlayableAsset, UnityEngine
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6717221304049181660, guid: 837ee73cd60b7964cbaa4cad186161d9,
         type: 3}
       propertyPath: OnPotionPoured.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Playables.PlayableAsset, UnityEngine
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6717221304049181660, guid: 837ee73cd60b7964cbaa4cad186161d9,
         type: 3}
