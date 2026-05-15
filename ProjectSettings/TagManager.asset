@@ -8,6 +8,10 @@ TagManager:
   - Box
   - Trail
   - Reloj
+  - Botella1
+  - Botella2
+  - Botella3
+  - Botella4
   layers:
   - Default
   - TransparentFX
