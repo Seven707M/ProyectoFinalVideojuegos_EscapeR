@@ -1,12 +1,21 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class BotellasControlador : MonoBehaviour
 {
-    [Header("Configuración del Puzzle")]
-    public List<XRSocketInteractor> sockets; 
-    public List<string> ordenCorrectoTags;   
+    void Start()
+{
+    foreach (var socket in sockets)
+    {
+        socket.onSelectEntered.AddListener((args) => VerificarOrden());
+    }
+}
+    [Header("Sockets donde se colocan las botellas")]
+    public List<XRSocketInteractor> sockets;
+
+    [Header("Orden correcto por TAGS")]
+    public List<string> ordenCorrectoTags;
 
     public void VerificarOrden()
     {
@@ -14,12 +23,10 @@ public class BotellasControlador : MonoBehaviour
 
         for (int i = 0; i < sockets.Count; i++)
         {
-            // Verificamos qué objeto tiene seleccionado el socket
-            var interactuable = sockets[i].GetOldestInteractableSelected();
+            XRBaseInteractable interactuable = sockets[i].selectTarget;
 
             if (interactuable != null)
             {
-                // Comparamos el Tag del objeto con nuestra lista de solución
                 if (interactuable.transform.CompareTag(ordenCorrectoTags[i]))
                 {
                     aciertos++;
@@ -27,20 +34,13 @@ public class BotellasControlador : MonoBehaviour
             }
         }
 
-        // Si el número de aciertos es igual al total de sockets
         if (aciertos == sockets.Count)
         {
-            Debug.Log("¡Excelente! Las 4 botellas están en el orden correcto.");
-            ResolverPuzzle();
+            Debug.Log("Orden correcto detectado ✅");
         }
         else
         {
-            Debug.Log("Aún falta algo o el orden es incorrecto. Aciertos: " + aciertos);
+            Debug.Log("Orden incorrecto ❌");
         }
-    }
-
-    void ResolverPuzzle()
-    {
-    
     }
 }
