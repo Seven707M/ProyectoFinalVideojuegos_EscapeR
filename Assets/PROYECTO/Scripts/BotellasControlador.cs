@@ -4,8 +4,12 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class BotellasControlador : MonoBehaviour
 {
+    public GameObject nota4;
+    public AudioClip sonidoNota;
+    private AudioSource audioSource;
     void Start()
 {
+    audioSource = GetComponent<AudioSource>();
     foreach (var socket in sockets)
     {
         socket.onSelectEntered.AddListener((args) => VerificarOrden());
@@ -16,6 +20,7 @@ public class BotellasControlador : MonoBehaviour
 
     [Header("Orden correcto por TAGS")]
     public List<string> ordenCorrectoTags;
+
 
     public void VerificarOrden()
     {
@@ -36,11 +41,13 @@ public class BotellasControlador : MonoBehaviour
 
         if (aciertos == sockets.Count)
         {
-            Debug.Log("Orden correcto detectado ✅");
+            //Nota
+            nota4.SetActive(true);
+            audioSource.PlayOneShot(sonidoNota);
         }
         else
         {
-            Debug.Log("Orden incorrecto ❌");
+            Debug.Log("Orden incorrecto");
         }
     }
 }

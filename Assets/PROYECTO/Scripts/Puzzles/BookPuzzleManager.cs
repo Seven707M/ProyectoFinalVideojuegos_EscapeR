@@ -14,6 +14,14 @@ public class BookPuzzleManager : MonoBehaviour
     public UnityEvent onPuzzleSolved;
 
     private bool isSolved = false;
+    public GameObject nota2;
+    public AudioClip sonidoNota;
+    private AudioSource audioSource;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     public void EvaluatePuzzle()
     {
@@ -35,7 +43,8 @@ public class BookPuzzleManager : MonoBehaviour
 
         Debug.Log("¡Secuencia correcta! Puzzle resuelto.");
         isSolved = true;
-        
+        nota2.SetActive(true);
+        audioSource.PlayOneShot(sonidoNota);
         // Ejecutamos la función para bloquear los libros
         LockBooks();
 

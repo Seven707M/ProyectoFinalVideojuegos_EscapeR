@@ -13,6 +13,14 @@ public class BotonesSecuencia : MonoBehaviour
     
     private List<GameObject> entradaJugador = new List<GameObject>();
     private bool isSolved = false;
+    public GameObject nota1;
+    public AudioClip sonidoNota;
+    private AudioSource audioSource;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     public void BotonPresionado(GameObject boton)
     {
@@ -38,7 +46,8 @@ public class BotonesSecuencia : MonoBehaviour
 
         if (entradaJugador.Count == secuenciaCorrecta.Count)
         {
-            Debug.Log("Correcto, Primer numero '5'");
+            nota1.SetActive(true);
+            audioSource.PlayOneShot(sonidoNota);
             isSolved = true;
 
             onPuzzleSolved.Invoke(); 
