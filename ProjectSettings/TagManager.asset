@@ -12,6 +12,7 @@ TagManager:
   - Botella2
   - Botella3
   - Botella4
+  - Pared
   layers:
   - Default
   - TransparentFX

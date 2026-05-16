@@ -45,16 +45,13 @@ public class BookPuzzleManager : MonoBehaviour
         isSolved = true;
         nota2.SetActive(true);
         audioSource.PlayOneShot(sonidoNota);
-        // Ejecutamos la función para bloquear los libros
         LockBooks();
 
         onPuzzleSolved.Invoke(); 
     }
 
-    // --- NUEVA FUNCIÓN ---
     private void LockBooks()
     {
-        // Recorremos cada socket de la repisa
         foreach (var socket in bookSockets)
         {
             XRBaseInteractable book = socket.selectTarget;
