@@ -1,6 +1,7 @@
 ﻿// Script optimizado y con rastreo de errores para VR
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PadLockPassword : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class PadLockPassword : MonoBehaviour
     public GameObject imagess;
     public int[] _numberPassword = { 0, 0, 0, 0 }; 
     public DoorController targetDoor;
+    [Header("Evento al ganar")]
+    public UnityEvent onGameSolved;
 
     private void Start()
     {
@@ -43,6 +46,7 @@ public class PadLockPassword : MonoBehaviour
             Destroy(gameObject);
             Destroy(imagess);
             targetDoor.OpenDoor();
+            onGameSolved.Invoke();
         }
     }
 }
