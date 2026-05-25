@@ -22492,11 +22492,11 @@ GameObject:
   - component: {fileID: 1580683341}
   - component: {fileID: 1580683345}
   - component: {fileID: 1580683344}
-  - component: {fileID: 1580683343}
   - component: {fileID: 1580683342}
   - component: {fileID: 1580683347}
   - component: {fileID: 1580683346}
   - component: {fileID: 1580683348}
+  - component: {fileID: 1580683343}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -22560,43 +22560,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1580683340}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2fadf230d1919748a9aa21d40f74619, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a2a9c34df4095f47b9ca8f975175f5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Device: 0
+  m_PoseSource: 2
+  m_PoseProviderComponent: {fileID: 0}
   m_TrackingType: 0
   m_UpdateType: 0
-  m_PositionAction:
-    m_Name: Main Camera - TPD - Position
-    m_Type: 0
-    m_ExpectedControlType: Vector3
-    m_Id: 8172c1a7-7546-49dc-81d2-0948138de5c9
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 7acf2b64-18ec-4823-b32d-c8642ceeeaa9
-      m_Path: <XRHMD>/centerEyePosition
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Main Camera - TPD - Position
-      m_Flags: 0
-  m_RotationAction:
-    m_Name: Main Camera - TPD - Rotation
-    m_Type: 0
-    m_ExpectedControlType: Quaternion
-    m_Id: bb4a52c4-bcf0-4036-b140-f5de92c923ad
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 1e24c807-4c05-4b5c-887b-654b007438c6
-      m_Path: <XRHMD>/centerEyeRotation
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Main Camera - TPD - Rotation
-      m_Flags: 0
+  m_UseRelativeTransform: 0
 --- !u!81 &1580683344
 AudioListener:
   m_ObjectHideFlags: 0
@@ -22708,6 +22680,7 @@ GameObject:
   - component: {fileID: 1581007314}
   - component: {fileID: 1581007313}
   - component: {fileID: 1581007312}
+  - component: {fileID: 1581007317}
   m_Layer: 0
   m_Name: LeftHand Ray
   m_TagString: Untagged
@@ -23172,6 +23145,24 @@ MonoBehaviour:
     m_Reference: {fileID: 7779212132400271959, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   m_ButtonPressPoint: 0.5
+--- !u!114 &1581007317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581007310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a2a9c34df4095f47b9ca8f975175f5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Device: 1
+  m_PoseSource: 4
+  m_PoseProviderComponent: {fileID: 0}
+  m_TrackingType: 0
+  m_UpdateType: 0
+  m_UseRelativeTransform: 1
 --- !u!1001 &1593778826
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27557,7 +27548,7 @@ MonoBehaviour:
   m_EnableStrafe: 1
   m_UseGravity: 0
   m_GravityApplicationMode: 0
-  m_ForwardSource: {fileID: 0}
+  m_ForwardSource: {fileID: 1580683341}
   m_LeftHandMoveAction:
     m_UseReference: 1
     m_Action:
@@ -29145,6 +29136,7 @@ GameObject:
   - component: {fileID: 1974535570}
   - component: {fileID: 1974535572}
   - component: {fileID: 1974535571}
+  - component: {fileID: 1974535575}
   m_Layer: 0
   m_Name: LeftHand Controller
   m_TagString: Untagged
@@ -29439,6 +29431,24 @@ Transform:
   m_Father: {fileID: 303104501}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1974535575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974535569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a2a9c34df4095f47b9ca8f975175f5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Device: 1
+  m_PoseSource: 4
+  m_PoseProviderComponent: {fileID: 0}
+  m_TrackingType: 0
+  m_UpdateType: 0
+  m_UseRelativeTransform: 1
 --- !u!1 &1982591805
 GameObject:
   m_ObjectHideFlags: 0
