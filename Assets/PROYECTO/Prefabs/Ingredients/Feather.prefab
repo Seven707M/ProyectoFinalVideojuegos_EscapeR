@@ -34,7 +34,8 @@ Transform:
   m_LocalRotation: {x: -0.6004206, y: -0.37349042, z: -0.37349042, w: 0.6004206}
   m_LocalPosition: {x: -5.605, y: 1.125, z: -1.776}
   m_LocalScale: {x: 0.542562, y: 0.542562, z: 0.542562}
-  m_Children: []
+  m_Children:
+  - {fileID: 7277966058314630557}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -63.767002}
@@ -220,7 +221,7 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
-  m_AttachTransform: {fileID: 0}
+  m_AttachTransform: {fileID: 7277966058314630557}
   m_AttachEaseInTime: 0.15
   m_MovementType: 1
   m_VelocityDamping: 0.4
@@ -256,6 +257,7 @@ MonoBehaviour:
   m_ThrowAngularVelocityScale: 0.25
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
+  m_AttachPointCompatibilityMode: 0
 --- !u!64 &4543638004951635866
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -314,3 +316,33 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 698723fe94cb4964fb9e7e5aea60b03f, type: 3}
   - {fileID: 8300000, guid: 8cc71be63fa30a8419e2e07ffcdba8c1, type: 3}
   - {fileID: 8300000, guid: 265b976ddc682714d9a91ef26e3a56a8, type: 3}
+--- !u!1 &6543561697425661400
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7277966058314630557}
+  m_Layer: 0
+  m_Name: attach
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7277966058314630557
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6543561697425661400}
+  m_LocalRotation: {x: 0.99450165, y: -0.005483992, z: 0.07659329, w: -0.071204074}
+  m_LocalPosition: {x: -0.024, y: -0.022, z: 0.154}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8823829851086716037}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 188.093, y: -8.897003, z: 1.2630005}
